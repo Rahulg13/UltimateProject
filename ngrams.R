@@ -41,5 +41,3 @@ twit3gram <- twit3gram[1:min(which(twit3gram < 20))]
 rm(blogs)
 rm(news)
 rm(twitter)
-
-save(data, file = "base.Rdata")
