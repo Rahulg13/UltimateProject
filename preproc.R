@@ -9,6 +9,7 @@ select1 <- (select1 == 1)
 blogs <- blogs[select1]
 blogs <- removePunctuation(blogs)
 blogs <- stripWhitespace(blogs)
+blogs <- removeWords(blogs, stopwords(kind = "en"))
 blogs <- tolower(blogs)
 blogs <- removeNumbers(blogs)
 writeLines(blogs, "SampleBlogs.txt")
@@ -19,6 +20,7 @@ select1 <- (select1 == 1)
 news <- news[select1]
 news <- removePunctuation(news)
 news <- stripWhitespace(news)
+news <- removeWords(news, stopwords(kind = "en"))
 news <- tolower(news)
 news <- removeNumbers(news)
 writeLines(news, "SampleNews.txt")
@@ -29,8 +31,12 @@ select1 <- (select1 == 1)
 twitter <- twitter[select1]
 twitter <- removePunctuation(twitter)
 twitter <- stripWhitespace(twitter)
+twitter <- removeWords(twitter, stopwords(kind = "en"))
 twitter <- tolower(twitter)
 twitter <- removeNumbers(twitter)
 
 writeLines(twitter, "SampleTwitter.txt")
 
+rm(blogs)
+rm(news)
+rm(twitter)
