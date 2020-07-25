@@ -6,7 +6,7 @@ shinyUI(fluidPage(
                 sidebarPanel(
                         h3("PREDICTION TEXT"),
                         textInput("txt", "Please enter the text below", value = "Write here"),
-                        submitButton("Submit")
+                        #submitButton("Submit")
                 ),
                 mainPanel(
                         tabsetPanel(
